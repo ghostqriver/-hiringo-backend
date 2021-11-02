@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-%q6w6j4v)0l43(((@at*x0^s_a@r&85o8+qa3$9vgeag&#dj8_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'student',
+    'teacher'
 ]
 
 MIDDLEWARE = [
@@ -75,8 +77,12 @@ WSGI_APPLICATION = 'hiringo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'hiringo',
+        'USER': 'root',
+        'PASSWORD': '996561',
+        'HOST': 'localhost',
+        'PORT': '3306'
     }
 }
 

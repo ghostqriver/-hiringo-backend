@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table align="center" >
+        <form action="{%url 'studentinsert' %}" method="post">{% csrf_token %}
+        <caption>Student SignUp</caption>
+        <tr><td>Username:</td><td><input type="int" name="sname"/></td></tr>
+        <tr><td>Password:</td><td><input type="str" name="spassword"/></td></tr>
+            <tr><td align="center" colspan="3"><input type="submit"/>
+            <input type="reset"/></td></tr>
+        </form>
+    </table>
+</body>
+</html>
+
+
